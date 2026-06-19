@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ท่องเที่ยวประเทศไทย</title>
+    <style>
+        /* นำเข้าฟอนต์ภาษาไทยให้ดูสวยงาม */
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        /* ส่วนหัวของเว็บไซต์ */
+        header {
+            background: linear-gradient(135deg, #00B4DB 0%, #0083B0 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* การจัดเรียงรูปแบบตาราง (Grid) */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding-bottom: 4rem;
+        }
+
+        /* กรอบใส่รูปภาพและข้อความ */
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* เอฟเฟกต์เวลาเอาเมาส์ชี้ */
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        /* ตั้งค่ารูปภาพ */
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            background-color: #ddd; /* สีพื้นหลังชั่วคราวกรณีรูปยังไม่ขึ้น */
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #0083B0;
+        }
+
+        .card-content p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #333;
+            color: white;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🇹🇭 เที่ยวเมืองไทย ไม่ไปไม่รู้</h1>
+        <p>รวมภาพความประทับใจและสถานที่ท่องเที่ยวที่สวยงาม</p>
+    </header>
+
+    <div class="container">
+        <div class="gallery">
+            
+            <!-- สถานที่ที่ 1 -->
+            <div class="card">
+                <!-- 💡 วิธีใส่รูป: เปลี่ยนข้อความใน src="..." เป็นชื่อไฟล์รูปของคุณ -->
+                <img src="https://www.wonderfulpackage.com/uploads/moxie/Article/%E0%B8%A1%E0%B8%B1%E0%B8%A5%E0%B8%94%E0%B8%B5%E0%B8%9F%E0%B8%AA%E0%B9%8C/maldives2.jpg" alt="รูปที่ 1">
+                <div class="card-content">
+                    <h3>ชื่อสถานที่ที่ 1</h3>
+                    <p>เขียนคำบรรยายสั้นๆ หรือความประทับใจเกี่ยวกับสถานที่นี้ลงที่นี่</p>
+                </div>
+            </div>
+
+            <!-- สถานที่ที่ 2 -->
+            <div class="card">
+                <img src="https://www.wonderfulpackage.com/uploads/moxie/Article/%E0%B8%A1%E0%B8%B1%E0%B8%A5%E0%B8%94%E0%B8%B5%E0%B8%9F%E0%B8%AA%E0%B9%8C/maldives2.jpg" alt="รูปที่ 2">
+                <div class="card-content">
+                    <h3>ชื่อสถานที่ที่ 2</h3>
+                    <p>เขียนคำบรรยายสั้นๆ หรือความประทับใจเกี่ยวกับสถานที่นี้ลงที่นี่</p>
+                </div>
+            </div>
+
+            <!-- สถานที่ที่ 3 -->
+            <div class="card">
+                <img src="https://www.wonderfulpackage.com/uploads/moxie/Article/%E0%B8%A1%E0%B8%B1%E0%B8%A5%E0%B8%94%E0%B8%B5%E0%B8%9F%E0%B8%AA%E0%B9%8C/maldives2.jpg" alt="รูปที่ 3">
+                <div class="card-content">
+                    <h3>ชื่อสถานที่ที่ 3</h3>
+                    <p>เขียนคำบรรยายสั้นๆ หรือความประทับใจเกี่ยวกับสถานที่นี้ลงที่นี่</p>
+                </div>
+            </div>
+
+            <!-- หากต้องการเพิ่มรูปอีก ให้ Copy โค้ดตั้งแต่ <div class="card"> จนถึง </div> มาวางต่อกันได้เลยครับ -->
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 แกลเลอรีท่องเที่ยวไทยของฉัน</p>
+    </footer>
+
+</body>
+</html>
